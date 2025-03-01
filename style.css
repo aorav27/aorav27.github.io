@@ -6,39 +6,77 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Body Styling */
+/* Light Mode (Default) */
+:root {
+    --bg-color: #f4f4f4; /* Light background for light mode */
+    --text-color: #333; /* Dark text for light mode */
+    --header-bg: #2c3e50; /* Dark header background */
+    --header-text: white; /* White text in header */
+    --section-bg: white; /* White background for sections */
+    --section-bg-dark: #555555; /* Light gray for sections in dark mode */
+    --section-shadow: rgba(0, 0, 0, 0.1); /* Light shadow for sections */
+    --link-color: #3498db; /* Link color */
+    --section-title-color: #333; /* Dark color for section titles in light mode */
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #1e1e1e; /* Dark background */
+    --text-color: #f4f4f4; /* Light text for dark mode */
+    --header-bg: #111; /* Dark header background */
+    --header-text: #f4f4f4; /* Light header text */
+    --section-bg: var(--section-bg-dark); /* Light gray for sections in dark mode */
+    --section-shadow: rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
+    --link-color: #4aa3ff; /* Light blue link color in dark mode */
+    --section-title-color: #f4f4f4; /* Light color for section titles in dark mode */
+}
+
+/* Apply Theme */
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color); /* Use text color variable */
     text-align: center;
     padding: 20px;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Header Section */
 header {
-    background: #2c3e50;
-    color: white;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Vertically centers the content */
+    background: var(--header-bg);
+    color: var(--header-text);
     padding: 30px 10px;
     font-size: 1.5rem;
+    flex-direction: column; /* Stacks content vertically */
+    border-radius: 10px; /* Add this line to curve the corners of the header */
+    overflow: hidden; /* Ensures the content stays within the rounded edges */
 }
 
-header h1 {
-    font-size: 2.5rem;
+/* Center header content (name and title) */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add space below the header content */
 }
 
 /* Section Styling */
 section {
-    background: white;
+    background: var(--section-bg);
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--section-shadow);
     max-width: 800px;
     text-align: left;
 }
 
+/* Header Section Titles */
 h2 {
-    color: #2c3e50;
+    color: var(--section-title-color); /* Use section-title-color variable for section titles */
     border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -58,17 +96,34 @@ li {
 footer {
     margin-top: 20px;
     padding: 20px;
-    background: #2c3e50;
-    color: white;
+    background: var(--header-bg);
+    color: var(--header-text);
 }
 
 /* Links */
 a {
-    color: #3498db;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Dark Mode Button Styling */
+#darkModeToggle {
+    background-color: #3498db;  /* Button color */
+    color: white;  /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add space above the button */
+}
+
+#darkModeToggle:hover {
+    background-color: #2980b9;  /* Hover effect */
 }
