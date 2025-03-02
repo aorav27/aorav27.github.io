@@ -280,6 +280,15 @@ footer {
         text-align: center;
     }
 
+    header p {
+        font-size: 12px; /* Smaller text for other header items */
+        line-height: 1.4;
+    }
+
+    header a {
+        font-size: 12px; /* Smaller links on mobile */
+    }
+
     .header-content h1 {
         font-size: 25px; /* Adjust size as needed */
         white-space: nowrap;
