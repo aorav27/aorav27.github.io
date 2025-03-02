@@ -347,5 +347,13 @@ footer {
         padding: 15px;
         font-size: 12px;
     }
+
+    .projects ul,
+    .skills ul,
+    .experience ul {
+    padding-left: 20px;  /* Adjust to match the container padding */
+    margin-left: 0;  /* Reset default margin */
+    list-style-position: inside;  /* Ensures bullets stay inside the container */
+    }
 }
 
