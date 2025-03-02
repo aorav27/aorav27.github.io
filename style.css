@@ -105,7 +105,7 @@ section {
     background: var(--section-bg);
     margin: 40px auto;
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 10px 20px var(--section-shadow); /* Stronger shadow for more depth */
     max-width: 900px;
     text-align: left;
@@ -141,7 +141,7 @@ a:hover {
     padding: 20px;
     background: var(--experience-bg);
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 5px 10px var(--section-shadow);
 }
 
@@ -167,7 +167,7 @@ a:hover {
 .nested-experience-item {
     background-color: #444444;  /* Light gray background */
     padding: 15px;  /* Add padding for better spacing */
-    border-radius: 8px;  /* Optional: rounded corners for a softer look */
+    border-radius: 20px;  /* Optional: rounded corners for a softer look */
     margin-top: 20px;  /* Increase the gap between nested experience items */
     box-shadow: 0 10px 20px var(--section-shadow);  /* Optional: add shadow for depth */
 }
@@ -196,7 +196,7 @@ a:hover {
     background: var(--section-bg);
     margin: 40px auto;
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 10px 20px var(--section-shadow);
     max-width: 900px;
     text-align: left;
@@ -244,7 +244,7 @@ footer {
     padding: 20px;
     background: var(--header-bg);
     color: var(--header-text);
-    border-radius: 12px;
+    border-radius: 20px;
     text-align: center;
 }
 
