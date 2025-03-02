@@ -4,40 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Austin Oravec - Portfolio</title>
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">    
 </head>
 
 <body>
     <header>
         <div class="header-content">
             <h1>Austin Oravec</h1>
-            <p>IT Support Technician<br></p>
+            <p>Pittsburgh, PA | Phone: +1 (814) 615-1699 | Email: austorav@outlook.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/austin-oravec/">LinkedIn</a> | 
+                <a href="https://github.com/aorav27">GitHub</a>
+            </p>
         </div>
-        <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>
-            - Adaptable, driven, and eager to stay ahead of tech trends.
-            <br><br>- Strong communicator with a background in public speaking, forensics, theatre, and singing. Always seeking growth, collaboration, and innovation in technology.
-            <br><br>- Passionate about cloud computing, Python development, and IT solutions. Skilled in troubleshooting and optimizing IT operations in fast-paced environments.</p>
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    - Adaptable, driven, and eager to stay ahead of tech trends.
+                    <br><br>- Strong communicator with a background in public speaking, forensics, theatre, and singing. Always seeking growth, collaboration, and innovation in technology.
+                    <br><br>- Passionate about cloud computing, Python development, and IT solutions. Skilled in troubleshooting and optimizing IT operations in fast-paced environments.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="src/austin-headshot.jpg" alt="Austin Oravec" class="headshot">
+            </div>
+        </div>
     </section>
 
     <section id="experience">
         <h2>Work Experience</h2>
         <ul>
-            <li><h3><strong>IT Support Technician - Pathways of Southwestern PA</strong></h3> (Dec 2024 - Present)  
-                <br><br> - Provided technical support and troubleshooting for employees across multiple locations, ensuring smooth IT operations in a fast-paced healthcare environment. 
-                <br><br> - Resolved hardware, software, and network issues, minimizing downtime and maintaining productivity.
+            <li>
+                <div class="experience-item">
+                    <img src="src/pathways-logo.png" alt="Company 1 Logo" class="logo">
+                    <div class="experience-details">
+                        <h3>IT Support Technician - Pathways of Southwestern PA</h3>
+                        <p>Dec 2024 - Present</p>
+                        <p>- Provided technical support and troubleshooting for employees across multiple locations, ensuring smooth IT operations in a fast-paced healthcare environment.</p>
+                        <p>- Resolved hardware, software, and network issues, minimizing downtime and maintaining productivity.</p>
+                        <p>- Managed Active Directory accounts, user permissions, and device configurations, ensuring secure and efficient system access.</p>
+                    </div>
+                </div>
+            </li>
 
-                <br><br> - Managed Active Directory accounts, user permissions, and device configurations, ensuring secure and efficient system access. <br><br> - Assisted with hardware deployments, including laptops, desktops, and peripherals, while maintaining clear documentation for asset tracking and issue resolution.
-                
-                <br><br> - Delivered responsive and user-friendly support, effectively communicating technical solutions to non-technical staff. Contributed to process improvements by identifying recurring issues and implementing better support strategies.</li>
-
-                <br><br><li><h3><strong>Service Desk Technician - 84 Lumber</strong></h3> (Aug 2024 - Nov 2024)  
-                <br><br>- Provided first-level technical support to hundreds of employees, troubleshooting software, hardware, printer, and network connectivity issues to ensure minimal downtime and a seamless user experience. <br><br> - Delivered efficient and effective technical assistance, contributing to a productive work environment.
-                <br><br> - Collaborated with cross-functional teams to identify and implement process improvements, reducing ticket resolution times and enhancing overall service delivery. <br><br>- Maintained clear and precise documentation, ensuring seamless knowledge transfer and consistently high customer satisfaction.</li>
+            <li>
+                <div class="experience-item">
+                    <img src="src/84-logo.png" alt="Company 2 Logo" class="logo">
+                    <div class="experience-details">
+                        <h3>Service Desk Technician - 84 Lumber</h3>
+                        <p>Aug 2024 - Nov 2024</p>
+                        <p>- Provided first-level technical support to hundreds of employees, troubleshooting software, hardware, printer, and network connectivity issues to ensure minimal downtime and a seamless user experience.</p>
+                    </div>
+                </div>
+            </li>
         </ul>
     </section>
 
@@ -63,33 +87,15 @@
         <p>Email: austorav@outlook.com | Phone: +1 (814) 615-1699 | <a href="https://github.com/aorav27">GitHub</a></p>
     </footer>
 
-    <!-- JavaScript at the end of body -->
     <script>
-       const toggleButton = document.getElementById("darkModeToggle");
+        const toggleButton = document.getElementById("darkModeToggle");
 
-// Check local storage for theme preference
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    document.querySelectorAll("section").forEach((section) => {
-        section.classList.add("dark-mode");
-    });
-}
-
-toggleButton.addEventListener("click", () => {
-    // Toggle the dark-mode class for both body and sections
-    document.body.classList.toggle("dark-mode");
-    document.querySelectorAll("section").forEach((section) => {
-        section.classList.toggle("dark-mode");
-    });
-
-    // Save preference in local storage
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-    } else {
-        localStorage.setItem("theme", "light");
-    }
-});
-
+        toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            document.querySelectorAll("section").forEach((section) => {
+                section.classList.toggle("dark-mode");
+            });
+        });
     </script>
 </body>
 </html>

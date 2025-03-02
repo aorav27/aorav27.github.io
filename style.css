@@ -1,103 +1,124 @@
-/* General Reset */
+/* General Reset */ 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Using Roboto for a more modern font */
 }
 
-/* Light Mode (Default) */
+/* Metallic Dark Mode */
 :root {
-    --bg-color: #f4f4f4; /* Light background for light mode */
-    --text-color: #333; /* Dark text for light mode */
-    --header-bg: #2c3e50; /* Dark header background */
-    --header-text: white; /* White text in header */
-    --section-bg: white; /* White background for sections */
-    --section-bg-dark: #555555; /* Light gray for sections in dark mode */
-    --section-shadow: rgba(0, 0, 0, 0.1); /* Light shadow for sections */
-    --link-color: #3498db; /* Link color */
-    --section-title-color: #333; /* Dark color for section titles in light mode */
+    --bg-color: #121212; /* Very dark background */
+    --text-color: #D1D1D1; /* Metallic silver for text */
+    --header-bg: #2C2C2C; /* Dark charcoal header */
+    --header-text: #D1D1D1; /* Metallic silver header text */
+    --section-bg: #2C2C2C; /* Darker metallic sections */
+    --experience-bg: #3A3A3A; /* Darker metallic experience section */
+    --section-shadow: rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    --link-color: #00BFFF; /* Bright metallic cyan for links */
+    --accent-color: #00BFFF; /* Bright metallic cyan accent */
+    --border-color: #B0B0B0; /* Metallic silver borders */
 }
 
-/* Dark Mode */
-.dark-mode {
-    --bg-color: #1e1e1e; /* Dark background */
-    --text-color: #f4f4f4; /* Light text for dark mode */
-    --header-bg: #111; /* Dark header background */
-    --header-text: #f4f4f4; /* Light header text */
-    --section-bg: var(--section-bg-dark); /* Light gray for sections in dark mode */
-    --section-shadow: rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
-    --link-color: #4aa3ff; /* Light blue link color in dark mode */
-    --section-title-color: #f4f4f4; /* Light color for section titles in dark mode */
-}
-
-/* Apply Theme */
+/* Body */
 body {
     background-color: var(--bg-color);
-    color: var(--text-color); /* Use text color variable */
-    text-align: center;
-    padding: 20px;
+    color: var(--text-color);
+    font-size: 18px; /* Increased base font size */
+    line-height: 1.6;
     transition: background 0.3s, color 0.3s;
+    padding: 20px;
 }
 
-/* Header Section */
+/* Header Styling */
 header {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Vertically centers the content */
+    flex-direction: column;
+    align-items: center;
     background: var(--header-bg);
     color: var(--header-text);
-    padding: 30px 10px;
-    font-size: 1.5rem;
-    flex-direction: column; /* Stacks content vertically */
-    border-radius: 10px; /* Add this line to curve the corners of the header */
-    overflow: hidden; /* Ensures the content stays within the rounded edges */
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px var(--section-shadow);
 }
 
-/* Center header content (name and title) */
-.header-content {
+header h1 {
+    font-size: 3.5rem; /* Increased header size */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem; /* Increased description size */
+    margin-bottom: 20px;
+}
+
+header a {
+    color: var(--link-color);
+    margin: 0 5px;
+}
+
+header a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* About Section */
+#about {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; /* Add space below the header content */
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+.headshot {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px var(--section-shadow);;
 }
 
 /* Section Styling */
 section {
     background: var(--section-bg);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--section-shadow);
-    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--section-shadow); /* Stronger shadow for more depth */
+    max-width: 900px;
     text-align: left;
 }
 
-/* Header Section Titles */
+/* Section Titles */
 h2 {
-    color: var(--section-title-color); /* Use section-title-color variable for section titles */
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-
-/* List Styling */
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-li {
-    padding: 8px 0;
-}
-
-/* Footer Styling */
-footer {
-    margin-top: 20px;
-    padding: 20px;
-    background: var(--header-bg);
-    color: var(--header-text);
+    color: var(--accent-color); /* Bright metallic cyan for section titles */
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center; /* Center the titles */
 }
 
 /* Links */
@@ -108,22 +129,86 @@ a {
 }
 
 a:hover {
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
-/* Dark Mode Button Styling */
-#darkModeToggle {
-    background-color: #3498db;  /* Button color */
-    color: white;  /* Text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    margin-top: 20px; /* Add space above the button */
+/* Experience Item Styling */
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--experience-bg);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--section-shadow);
 }
 
-#darkModeToggle:hover {
-    background-color: #2980b9;  /* Hover effect */
+.experience-item .logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.experience-item .experience-details {
+    flex: 1;
+}
+
+#experience ul {
+    list-style-type: none; /* Removes bullets from list */
+    padding-left: 0; /* Removes left padding */
+}
+
+#experience li {
+    margin-bottom: 20px; /* Optional: Adds space between work experience items */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--header-bg);
+    color: var(--header-text);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 30px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .headshot {
+        width: 150px;
+        height: 150px;
+    }
 }
