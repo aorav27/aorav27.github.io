@@ -285,6 +285,12 @@ footer {
         white-space: nowrap;
     }
 
+    .headshot {
+        width: 120px;  /* Adjust size as needed */
+        height: 120px; /* Ensure height matches width */
+        border-radius: 50%; /* Keep it circular */
+    }
+
     /* Reduce navigation size */
     nav {
         font-size: 14px;
