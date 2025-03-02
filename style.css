@@ -164,6 +164,80 @@ a:hover {
     margin-bottom: 20px; /* Optional: Adds space between work experience items */
 }
 
+.nested-experience-item {
+    background-color: #444444;  /* Light gray background */
+    padding: 15px;  /* Add padding for better spacing */
+    border-radius: 8px;  /* Optional: rounded corners for a softer look */
+    margin-top: 20px;  /* Increase the gap between nested experience items */
+    box-shadow: 0 10px 20px var(--section-shadow);  /* Optional: add shadow for depth */
+}
+
+/* Subsection styling for better separation */
+.subsection {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 2px solid var(--accent-color);
+}
+
+.subsection h4 {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subsection p {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+
+#education {
+    background: var(--section-bg);
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--section-shadow);
+    max-width: 900px;
+    text-align: left;
+}
+
+#education h2 {
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.education-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education-details {
+    max-width: 500px;
+}
+
+.education-details h3 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.education-details p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.university-logo img {
+    width: 250px; /* Adjust the logo size */
+    height: auto;
+}
+
 /* Footer */
 footer {
     margin-top: 40px;
