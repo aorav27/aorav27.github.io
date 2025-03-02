@@ -280,6 +280,11 @@ footer {
         text-align: center;
     }
 
+    .header-content h1 {
+        font-size: 24px; /* Adjust size as needed */
+        white-space: nowrap;
+    }
+
     /* Reduce navigation size */
     nav {
         font-size: 14px;
@@ -346,12 +351,12 @@ footer {
         text-align: center;
         padding: 15px;
         font-size: 12px;
-    }
+    }    
 
     .projects ul,
     .skills ul,
     .experience ul {
-    padding-left: 20px;  /* Adjust to match the container padding */
+    padding-left: 15px;  /* Adjust to match the container padding */
     margin-left: 0;  /* Reset default margin */
     list-style-position: inside;  /* Ensures bullets stay inside the container */
     }
