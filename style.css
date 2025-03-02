@@ -281,12 +281,12 @@ footer {
     }
 
     header p {
-        font-size: 12px; /* Smaller text for other header items */
+        font-size: 14px; /* Smaller text for other header items */
         line-height: 1.4;
     }
 
     header a {
-        font-size: 12px; /* Smaller links on mobile */
+        font-size: 14px; /* Smaller links on mobile */
     }
 
     .header-content h1 {
@@ -375,6 +375,18 @@ footer {
 
     li {
         margin-bottom: 8px; /* Adjust spacing between bullet points */
+    }
+
+    #education h2 {
+        font-size: 16px; /* Smaller title for education section */
+    }
+
+    .education-details h3 {
+        font-size: 14px; /* Smaller degree/title font */
+    }
+
+    .education-details p {
+        font-size: 12px; /* Smaller text for the details */
     }
 }
 
