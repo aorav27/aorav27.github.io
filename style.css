@@ -281,7 +281,7 @@ footer {
     }
 
     .header-content h1 {
-        font-size: 24px; /* Adjust size as needed */
+        font-size: 26px; /* Adjust size as needed */
         white-space: nowrap;
     }
 
@@ -356,7 +356,7 @@ footer {
     .projects ul,
     .skills ul,
     .experience ul {
-    padding-left: 15px;  /* Adjust to match the container padding */
+    padding-left: 10px;  /* Adjust to match the container padding */
     margin-left: 0;  /* Reset default margin */
     list-style-position: inside;  /* Ensures bullets stay inside the container */
     }
